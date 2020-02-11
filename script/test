@@ -4,5 +4,5 @@ set -e
 
 CDPATH="" cd -- "$(dirname -- "$(dirname -- "$0")")"
 
-go get -u
+go get -u ./...
 go test -race ./...
