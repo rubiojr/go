@@ -1,10 +1,12 @@
 package client
 
 import (
+	"os"
 	"testing"
 )
 
 func TestClient(t *testing.T) {
+	os.Setenv("GITHUB_TOKEN", "foobar")
 	c1, _ := Singleton()
 	c2, _ := Singleton()
 
