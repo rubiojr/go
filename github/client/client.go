@@ -74,7 +74,7 @@ func CachingSingleton(url string) (*github.Client, error) {
 		}
 	})
 
-	return ghcInstance, err
+	return ghcCachingInstance, err
 }
 
 func cacheForURL(u string) (httpcache.Cache, error) {

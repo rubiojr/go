@@ -21,10 +21,15 @@ func TestSingleton(t *testing.T) {
 }
 
 func TestCachingSingleton(t *testing.T) {
+	ghcInstance = nil
 	os.Setenv("GITHUB_TOKEN", "foobar")
 	c1, err := CachingSingleton("mem:")
 	if err != nil {
 		t.Fatal("Error creating the cache")
+	}
+
+	if c1 == nil {
+		t.Error("should return a client")
 	}
 
 	c2, err := CachingSingleton("mem:")
