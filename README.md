@@ -12,3 +12,4 @@ Well, they may help at some point, not sure when.
 * https://github.com/vimeo/go-util
 * https://github.com/juju/utils
 * https://github.com/solo-io/go-utils
+* https://github.com/gxxgle/go-utils
