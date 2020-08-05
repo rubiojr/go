@@ -11,6 +11,7 @@ require (
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
 	github.com/zalando/go-keyring v0.0.0-20200121091418-667557018717
+	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2
 	golang.org/x/net v0.0.0-20200202094626-16171245cfb2 // indirect
 	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
 	google.golang.org/appengine v1.6.5 // indirect
