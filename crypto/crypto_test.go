@@ -14,7 +14,7 @@ func TestBase64AESGCMEncrypt(t *testing.T) {
 		t.Error("error: data wasn't encrypted")
 	}
 
-	decrypted, err := Base64AESGCMDecrypt("secret", []byte(encrypted))
+	decrypted, err := Base64AESGCMDecrypt("secret", encrypted)
 	if err != nil {
 		t.Fatal(err)
 	}

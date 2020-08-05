@@ -40,8 +40,11 @@ func Base64AESGCMEncrypt(key string, data []byte) (string, error) {
 }
 
 // Decrypt a base64 encoded string encrypted with Base64Encrypt.
-func Base64AESGCMDecrypt(key string, data []byte) ([]byte, error) {
-	ddata, _ := b64.StdEncoding.DecodeString(string(data))
+func Base64AESGCMDecrypt(key, encodedData string) ([]byte, error) {
+	ddata, err := b64.StdEncoding.DecodeString(encodedData)
+	if err != nil {
+		return nil, err
+	}
 	salt, data := ddata[len(ddata)-32:], ddata[:len(ddata)-32]
 	newkey, _, err := deriveKey([]byte(key), salt)
 	if err != nil {
