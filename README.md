@@ -12,3 +12,4 @@ Each directory has a README with documentation. If that's not the case, it's hig
 * https://github.com/juju/utils
 * https://github.com/solo-io/go-utils
 * https://github.com/gxxgle/go-utils
+* https://github.com/dgryski/trifles
